@@ -12,14 +12,12 @@
         <span class="pull-left event" ng-style="{backgroundColor: event.color.primary}"></span>
         &nbsp;
         <a
-          href="javascript:;"
           class="event-item"
           ng-click="vm.onEventClick({calendarEvent: event})">
           <span ng-bind-html="isMonthView ? vm.calendarEventTitle.monthView(event) : vm.calendarEventTitle.yearView(event) | calendarTrustAsHtml"></span>
         </a>
 
         <a
-          href="javascript:;"
           class="event-item-action"
           ng-class="action.cssClass"
           ng-repeat="action in event.actions track by $index"
