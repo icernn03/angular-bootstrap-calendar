@@ -72,7 +72,6 @@
               on-resize-end="vm.weekResized(eventRow.event, edge, x / ((vm.dayColumnDimensions.width - (vm.showTimes ? 60 : 0)) / vm.view.days.length))">
               <strong ng-bind="(eventRow.event.tempStartsAt || eventRow.event.startsAt) | calendarDate:'time':true" ng-show="vm.showTimes"></strong>
               <a
-                href="javascript:;"
                 ng-click="vm.onEventClick({calendarEvent: eventRow.event})"
                 class="event-item"
                 ng-bind-html="vm.calendarEventTitle.weekView(eventRow.event) | calendarTrustAsHtml"
@@ -81,7 +80,6 @@
                 tooltip-append-to-body="true">
               </a>
               <a
-                href="javascript:;"
                 class="event-item-action"
                 ng-class="action.cssClass"
                 ng-repeat="action in eventRow.event.actions track by $index"
